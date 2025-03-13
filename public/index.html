@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon Claim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg,skyblue,pink,blue);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background:antiquewhite;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease-in-out;
+             
+        }
+        
+        .container:hover{
+            transform:scale(1.1);
+        }
+        button {
+            background:red;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        async function claimCoupon() {
+            const response = await fetch('/claim', { method: 'POST' });
+            const data = await response.json();
+            document.getElementById('message').innerText = data.message;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 Claim Your Coupon 🎁</h1>
+        <button onclick="claimCoupon()">Claim Now</button>
+        <p id="message"></p>
+    </div>
+</body>
+</html>
+
