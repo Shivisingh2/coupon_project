@@ -6,7 +6,7 @@
     <title>Coupon Claim</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+           font-family: Arial, sans-serif;
             text-align: center;
             background: linear-gradient(135deg,skyblue,pink,blue);
             height: 100vh;
@@ -14,24 +14,21 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
         }
         .container {
-            width:40%;
-            background:antiquewhite;
+            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.5s ease-in-out;
-             
         }
 
 
-        }
         button {
-            background: red;
+            background-color: #ff5722;
             color: white;
             padding: 15px 30px;
-            font-size: 22px;
+            font-size: 18px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -42,7 +39,7 @@
             background-color: #e64a19;
         }
         #message {
-            margin-top: 20px;
+             margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
         }
@@ -58,18 +55,17 @@
     }
 
     button {
-        width: 40%;
+        width: 50%;
         font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 90%;
+        width: 95%;
     }
 
     button {
-        
         font-size: 20px;
     }
 }
@@ -85,13 +81,6 @@
         }
 
         
-        window.addEventListener("resize", function () {
-    if (window.innerWidth < 600) {
-        document.querySelector(".container").style.padding = "10px";
-    } else {
-        document.querySelector(".container").style.padding = "20px";
-    }
-});
 
     </script>
 </head>
